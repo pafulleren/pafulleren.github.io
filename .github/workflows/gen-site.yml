@@ -20,12 +20,12 @@ jobs:
         run: |
           curl -O https://beta.quicklisp.org/quicklisp.lisp
           sbcl --load quicklisp.lisp \
-               --eval "(quicklisp-quickstart:install)" \
+               --eval "(quicklisp-quickstart:install :path \"/opt/quicklisp\")" \
                --quit
 
       - name: Build
         run: |
-          sbcl --load "~/quicklisp/setup.lisp" \
+          sbcl --load "/opt/quicklisp/setup.lisp" \
                --eval "(ql:quickload :blog-gen)" \
                --load "build.lisp" \
                --quit
