@@ -89,7 +89,7 @@
            for n = (car pair)
            and thunk = (cdr pair)
            do (:li :id (format nil "fn-~a" n)
-                   (:a :href (format nil "#fnref-~a" n) "↑")
+                   (:a :href (format nil "#fnref-~a" n) "Ʌ")
                    (funcall thunk))))))
 
 (defmacro footnote (&body content)
