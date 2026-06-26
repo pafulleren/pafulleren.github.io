@@ -6,7 +6,7 @@
                           #:make-blog
                           #:footnote))
 (in-package :blog.build)
-
+(ensure-directories-exist "out/")
 (with-open-file (stream "out/style.css"
                         :direction :output
                         :if-exists :supersede)
