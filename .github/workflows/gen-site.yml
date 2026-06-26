@@ -26,6 +26,7 @@ jobs:
       - name: Build
         run: |
           sbcl --load "/opt/quicklisp/setup.lisp" \
+               --eval "(pushnew \"$GITHUB_WORKSPACE/../\" ql:*local-project-directories*)"
                --eval "(ql:quickload :blog-gen)" \
                --load "build.lisp" \
                --quit
