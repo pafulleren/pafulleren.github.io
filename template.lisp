@@ -15,7 +15,8 @@
     (:media "(prefers-color-scheme: dark)"
      (body
       :background-color "light-dark(#fafafa, #1b262c)"
-      :color "light-dark(#000000, #eeeeee)"))
+      :color "light-dark(#000000, #eeeeee)"
+      :font-size "1.25em"))
     (.fnref
      :position "relative"
      :cursor "pointer"
@@ -32,7 +33,7 @@
       :border "1px solid #ccc"
       :border-radius "4px"
       :padding ".5em .75em"
-      :font-size ".85em"
+;      :font-size "1em"
       :font-weight "normal"
       :vertical-align "baseline"
       :z-index 10
@@ -67,7 +68,11 @@
       :justify-content center
       :gap "8px"
       :padding "24px 0"
-      :border-bottom "2px solid #e0e0e0")
+      :border-bottom "2px solid #e0e0e0"
+      (a
+       :color inherit
+       :text-decoration inherit
+       :cursor text))
      ((:parent -date)
       :font-size "0.875rem"
       :font-weight 600
@@ -89,7 +94,7 @@
            for n = (car pair)
            and thunk = (cdr pair)
            do (:li :id (format nil "fn-~a" n)
-                   (:a :href (format nil "#fnref-~a" n) "Ʌ")
+                   (:a :href (format nil "#fnref-~a" n) "ʌ")
                    (funcall thunk))))))
 
 (defmacro footnote (&body content)
@@ -123,7 +128,7 @@
      (:body
       (with-footnote-context
         (:header :class "title-container"
-                 (:h1 :class "title-text" (blog-title blog))
+                 (:a :href "/" (:h1 :class "title-text" (blog-title blog)))
                  (:span :class "title-date" (blog-date blog)))
         (funcall (blog-body blog)))))))
 
