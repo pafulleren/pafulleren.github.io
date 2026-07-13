@@ -91,7 +91,7 @@
                :_ (format nil "on mouseenter
                                  put innerHTML of #fn-~a into #footnote-popup-box then
                                    remove .hidden from #footnote-popup-box then
-                                   if (window.matchMedia('hover: hover').matches)
+                                   if (window.matchMedia('(hover: hover)').matches)
                                    measure #footnote-popup-box then set :popheight to result.height
                                    then set *top of #footnote-popup-box to (event.clientY - :popheight) + 'px'
                                    then set *left of #footnote-popup-box to (event.clientX - 25) + 'px'
