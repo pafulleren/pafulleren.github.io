@@ -17,7 +17,26 @@
   <ol class=blogs>
    <li><a href=hello-world!.html>Hello World!</a>
   </ol>
+  <script
+          src="https://cdn.jsdelivr.net/npm/hyperscript.org@0.9.93/dist/_hyperscript.min.js"
+          integrity="sha384-/6HsqTiz02YfFBUhzTwlH/yxe68DhfnkdHiWytM3nxAzs/yvG+3FZY0f4KLnNoov"
+          crossorigin=anonymous></script>
   <ol class=footnotes>
   </ol>
+  <div class="footnote-modal-overlay hidden"
+       id=footnote-popup-box
+       _="on click from body
+                  if event.target is not in me and not event.target.matches(&#39;.fnref a&#39;)
+                    add .hidden to me
+                  end
+                end
+                on keyup from window
+                  if event.key is &#39;Escape&#39; or event.target.id is &#39;footnote-popup-box&#39;
+                    add .hidden to me
+                  end
+                end
+                on mouseenter remove .hidden from me then set $isTooltipHovered to true end
+                on mouseleave wait 150ms then add .hidden to me then set $isTooltipHovered to false end"
+       style="position: fixed;"></div>
  </body>
 </html>

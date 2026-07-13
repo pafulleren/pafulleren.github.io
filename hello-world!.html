@@ -20,15 +20,61 @@
    out there? Uhh... Why not, I guess. Making a blog was just an excuse to mess 
    around.
   <p>God, this is boring. I don&#39;t know what to type. It uses Spinneret<sup
-   class=fnref><a href=#fn-1 id=fnref-1>[1]<span class=fn-preview>A Common Lisp 
-      library to generate HTML from sexprs</span></a></sup>, and LASS<sup
-   class=fnref><a href=#fn-2 id=fnref-2>[2]<span class=fn-preview>Another library to 
-      generate CSS in CL</span></a></sup> to create the files, iterating through a 
-   directory (src/) and loading every .lisp file in it. It&#39;s cursed, probably.
+   class=fnref><a href=#fn-1 id=fnref-1
+    _="on mouseenter
+                                 put innerHTML of #fn-1 into #footnote-popup-box then
+                                   remove .hidden from #footnote-popup-box then
+                                   if (window.matchMedia(&#39;hover: hover&#39;).matches)
+                                   measure #footnote-popup-box then set :popheight to result.height
+                                   then set *top of #footnote-popup-box to (event.clientY - :popheight) + &#39;px&#39;
+                                   then set *left of #footnote-popup-box to (event.clientX - 25) + &#39;px&#39;
+                                 end
+                               end
+                               on mouseout wait 100ms then if (not $isTooltipHovered) add .hidden to #footnote-popup-box end end
+                               on click
+                                 put innerHTML of #fn-1 into #footnote-popup-box then
+                                 remove .hidden from #footnote-popup-box
+                               end">[1]</a></sup>, and LASS<sup class=fnref><a
+    href=#fn-2 id=fnref-2
+    _="on mouseenter
+                                 put innerHTML of #fn-2 into #footnote-popup-box then
+                                   remove .hidden from #footnote-popup-box then
+                                   if (window.matchMedia(&#39;hover: hover&#39;).matches)
+                                   measure #footnote-popup-box then set :popheight to result.height
+                                   then set *top of #footnote-popup-box to (event.clientY - :popheight) + &#39;px&#39;
+                                   then set *left of #footnote-popup-box to (event.clientX - 25) + &#39;px&#39;
+                                 end
+                               end
+                               on mouseout wait 100ms then if (not $isTooltipHovered) add .hidden to #footnote-popup-box end end
+                               on click
+                                 put innerHTML of #fn-2 into #footnote-popup-box then
+                                 remove .hidden from #footnote-popup-box
+                               end">[2]</a></sup> to create the files, iterating 
+   through a directory (src/) and loading every .lisp file in it. It&#39;s cursed, 
+   probably.
+  <script
+          src="https://cdn.jsdelivr.net/npm/hyperscript.org@0.9.93/dist/_hyperscript.min.js"
+          integrity="sha384-/6HsqTiz02YfFBUhzTwlH/yxe68DhfnkdHiWytM3nxAzs/yvG+3FZY0f4KLnNoov"
+          crossorigin=anonymous></script>
   <ol class=footnotes>
    <li id=fn-1><a href=#fnref-1>ʌ</a>A Common Lisp library to generate HTML from 
     sexprs
    <li id=fn-2><a href=#fnref-2>ʌ</a>Another library to generate CSS in CL
   </ol>
+  <div class="footnote-modal-overlay hidden"
+       id=footnote-popup-box
+       _="on click from body
+                  if event.target is not in me and not event.target.matches(&#39;.fnref a&#39;)
+                    add .hidden to me
+                  end
+                end
+                on keyup from window
+                  if event.key is &#39;Escape&#39; or event.target.id is &#39;footnote-popup-box&#39;
+                    add .hidden to me
+                  end
+                end
+                on mouseenter remove .hidden from me then set $isTooltipHovered to true end
+                on mouseleave wait 150ms then add .hidden to me then set $isTooltipHovered to false end"
+       style="position: fixed;"></div>
  </body>
 </html>
